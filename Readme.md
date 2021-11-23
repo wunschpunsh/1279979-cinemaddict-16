@@ -1,7 +1,7 @@
 # Проект «Киноман»
 
 * Студент: [Артем Сальников](https://up.htmlacademy.ru/ecmascript/16/user/1279979).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Зубов](https://htmlacademy.ru/profile/id42701).
 
 ---
 
