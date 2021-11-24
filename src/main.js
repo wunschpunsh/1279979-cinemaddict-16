@@ -17,4 +17,4 @@ for (let i = 0; i < FILM_COUNT; i++) {
 }
 renderTemplate(siteHeaderElement, createUserRankTemplate(), RenderPosition.BEFOREEND);
 renderTemplate(siteMainElement, createButtonShowMoreTemplate(), RenderPosition.BEFOREEND);
-//renderTemplate(siteFooterElement, createPopupAboutFilm(), RenderPosition.AFTEREND);
+renderTemplate(siteFooterElement, createPopupAboutFilm(), RenderPosition.AFTEREND);
