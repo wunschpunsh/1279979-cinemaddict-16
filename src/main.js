@@ -1,6 +1,6 @@
 import { createSiteMenuTemplate } from './view/site-menu-view.js';
 import { renderTemplate, RenderPosition } from './render.js';
-import { createCardFilmTemplate } from './view/card-film-view.js';
+import { createCardFilmTemplate, createFilmContainer } from './view/card-film-view.js';
 import { createUserRankTemplate } from './view/user-rank-view.js';
 import { createButtonShowMoreTemplate } from './view/button-show-more-view.js';
 import { createPopupAboutFilm } from './view/popup-about-film.js';
@@ -10,9 +10,11 @@ const siteHeaderElement = document.querySelector('.header');
 const siteFooterElement = document.querySelector('.footer');
 
 renderTemplate(siteMainElement, createSiteMenuTemplate(), RenderPosition.BEFOREEND);
+renderTemplate(siteMainElement, createFilmContainer(), RenderPosition.BEFOREEND);
+const siteFilmContainerElement = siteMainElement.querySelector('.films-list__container');
 for (let i = 0; i < FILM_COUNT; i++) {
-  renderTemplate(siteMainElement, createCardFilmTemplate(), RenderPosition.BEFOREEND);
+  renderTemplate(siteFilmContainerElement, createCardFilmTemplate(), RenderPosition.BEFOREEND);
 }
 renderTemplate(siteHeaderElement, createUserRankTemplate(), RenderPosition.BEFOREEND);
 renderTemplate(siteMainElement, createButtonShowMoreTemplate(), RenderPosition.BEFOREEND);
-renderTemplate(siteFooterElement, createPopupAboutFilm(), RenderPosition.AFTEREND);
+//renderTemplate(siteFooterElement, createPopupAboutFilm(), RenderPosition.AFTEREND);
